@@ -41,7 +41,7 @@ export const ACHIEVEMENTS: Achievement[] = [
 ];
 
 export const CONTACT_INFO = {
-  email: "info@systomex.com",
-  phone: "+880XXXXXXXXXX",
-  address: "Bangladesh",
+  email: "systomex@gmail.com",
+  phone: "01732247599",
+  address: "Colony, Bogura, Bangladesh",
 };
