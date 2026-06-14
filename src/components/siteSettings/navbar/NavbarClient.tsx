@@ -14,6 +14,7 @@ export default function NavbarClient() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -34,9 +35,11 @@ export default function NavbarClient() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50",
+        "border-b border-transparent",
+        "transition-[background-color,border-color,box-shadow] duration-300 ease-out",
         scrolled
-          ? "bg-dark/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20"
+          ? "bg-dark/95 border-secondary/20 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
           : "bg-transparent",
       )}
     >
@@ -83,7 +86,8 @@ export default function NavbarClient() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors"
+            type="button"
+            className="lg:hidden p-2 text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors outline-none ring-0 focus:outline-none focus:ring-0"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -96,7 +100,7 @@ export default function NavbarClient() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "lg:hidden fixed inset-0 top-16 bg-dark/95 backdrop-blur-xl transition-all duration-300",
+          "lg:hidden fixed inset-0 top-16 bg-dark/95 transition-opacity duration-300",
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none",
         )}
       >

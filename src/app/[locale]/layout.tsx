@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
 import { AppProvider } from "@/contexts/AppContext";
+import ButtonFocusGuard from "@/components/common/ButtonFocusGuard";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_LOGO } from "@/data/site";
 
 const inter = Inter({
@@ -47,6 +48,7 @@ export default async function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <AppProvider>
+            <ButtonFocusGuard />
             {children}
             <Toaster position="top-right" richColors closeButton />
           </AppProvider>

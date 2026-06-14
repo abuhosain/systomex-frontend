@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
             return (
               <StaggerItem key={feature.id}>
                 <GlassCard className="p-6 text-center h-full group">
-                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:shadow-[0_0_25px_rgba(0,255,179,0.2)] transition-shadow">
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center group-hover:shadow-[0_0_25px_rgba(138,43,226,0.25)] transition-shadow">
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{feature.title}</h3>

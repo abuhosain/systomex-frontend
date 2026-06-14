@@ -24,7 +24,7 @@ export default function Services() {
             return (
               <StaggerItem key={service.id}>
                 <GlassCard glow className="group h-full p-6 flex flex-col">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-5 group-hover:shadow-[0_0_20px_rgba(10,132,255,0.3)] transition-shadow">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center mb-5 group-hover:shadow-[0_0_20px_rgba(224,17,95,0.3)] transition-shadow">
                     <Icon className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>

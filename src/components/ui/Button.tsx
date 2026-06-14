@@ -25,14 +25,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const base =
-      "inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed";
+      "inline-flex items-center justify-center gap-2 font-semibold rounded-xl duration-200 outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 active:outline-none active:ring-0 disabled:opacity-50 disabled:cursor-not-allowed";
 
     const variants = {
-      primary:   "bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-800",
-      secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200 active:bg-gray-300",
-      outline:   "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 active:bg-gray-100",
-      ghost:     "bg-transparent text-gray-600 hover:bg-gray-100 active:bg-gray-200",
-      danger:    "bg-red-600 text-white hover:bg-red-700 active:bg-red-800",
+      primary:
+        "bg-gradient-to-r from-secondary via-accent to-primary text-white hover:brightness-110 active:opacity-90 shadow-neon-sm transition-[filter,opacity]",
+      secondary:
+        "bg-white/10 text-white hover:bg-white/15 active:bg-white/20 border border-white/10 transition-colors",
+      outline:
+        "border border-white/20 bg-transparent text-white hover:bg-white/5 active:bg-white/10 transition-colors",
+      ghost:
+        "bg-transparent text-gray-400 hover:bg-white/5 hover:text-white active:bg-white/10 transition-colors",
+      danger:
+        "bg-red-600 text-white hover:bg-red-700 active:bg-red-800 transition-colors",
     };
 
     const sizes = {

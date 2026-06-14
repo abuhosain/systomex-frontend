@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { cn } from "@/utils/utils";
 import type { ReactNode } from "react";
 
@@ -31,22 +30,23 @@ export default function GradientButton({
 
   const variants = {
     primary:
-      "bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:brightness-110",
+      "bg-gradient-to-r from-secondary via-accent to-primary text-white shadow-lg shadow-secondary/25 hover:shadow-neon hover:brightness-110",
     outline:
-      "border border-white/20 bg-white/5 text-white backdrop-blur-sm hover:border-primary/50 hover:bg-primary/10",
+      "border border-white/20 bg-white/5 text-white backdrop-blur-sm hover:border-secondary/50 hover:bg-secondary/10",
     ghost: "text-gray-300 hover:text-white hover:bg-white/5",
   };
 
   return (
-    <motion.button
+    <button
       type={type}
       disabled={disabled}
       onClick={onClick}
-      whileHover={{ scale: disabled ? 1 : 1.02 }}
-      whileTap={{ scale: disabled ? 1 : 0.98 }}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-300",
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark",
+        "inline-flex items-center justify-center gap-2 rounded-xl font-semibold",
+        "outline-none ring-0",
+        "focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0",
+        "active:outline-none active:ring-0",
+        "transition-[filter,opacity,background-color,border-color] duration-200",
         "disabled:opacity-50 disabled:cursor-not-allowed",
         sizes[size],
         variants[variant],
@@ -54,6 +54,6 @@ export default function GradientButton({
       )}
     >
       {children}
-    </motion.button>
+    </button>
   );
 }

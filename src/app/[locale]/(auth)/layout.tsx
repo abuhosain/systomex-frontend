@@ -4,11 +4,11 @@ import Logo from "@/components/website/shared/Logo";
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <header className="border-b border-gray-200 bg-white">
+    <div className="min-h-screen flex flex-col bg-dark">
+      <header className="border-b border-white/10 bg-dark/80 backdrop-blur-xl">
         <div className="container h-14 flex items-center">
           <Link href="/" className="transition-opacity hover:opacity-90">
-            <Logo size="sm" theme="light" />
+            <Logo size="sm" theme="dark" />
           </Link>
         </div>
       </header>
@@ -17,8 +17,8 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         {children}
       </main>
 
-      <footer className="border-t border-gray-200 bg-white py-4">
-        <p className="text-center text-xs text-gray-400">
+      <footer className="border-t border-white/10 bg-dark py-4">
+        <p className="text-center text-xs text-gray-500">
           &copy; {new Date().getFullYear()} SystomeX. All rights reserved.
         </p>
       </footer>

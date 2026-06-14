@@ -25,7 +25,7 @@ export default function SectionHeading({
       )}
     >
       {badge && (
-        <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold tracking-widest uppercase rounded-full border border-primary/30 bg-primary/10 text-secondary">
+        <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold tracking-widest uppercase rounded-full border border-secondary/30 bg-secondary/10 text-primary">
           {badge}
         </span>
       )}

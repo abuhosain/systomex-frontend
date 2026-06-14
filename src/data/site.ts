@@ -1,7 +1,7 @@
 import type { NavLink, Stat, Partner, Achievement } from "@/types/website";
 
 export const SITE_NAME = "SystomeX";
-export const SITE_LOGO = "/logo.jpeg";
+export const SITE_LOGO = "/logo.png";
 export const SITE_TAGLINE =
   "Building the Future with Robotics & Automation";
 export const SITE_DESCRIPTION =

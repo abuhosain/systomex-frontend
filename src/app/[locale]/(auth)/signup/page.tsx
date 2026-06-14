@@ -55,10 +55,10 @@ export default function SignupPage() {
 
   return (
     <div className="w-full max-w-md">
-      <div className="bg-white border border-gray-200 rounded-2xl px-8 py-10 shadow-sm">
+      <div className="card px-8 py-10">
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-gray-900">Create account</h1>
-          <p className="mt-1 text-sm text-gray-500">Sign up to get started</p>
+          <h1 className="text-2xl font-bold text-white">Create account</h1>
+          <p className="mt-1 text-sm text-gray-400">Sign up to get started</p>
         </div>
 
         <form onSubmit={handleSubmit} noValidate className="space-y-5">
@@ -104,9 +104,9 @@ export default function SignupPage() {
           </Button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-500">
+        <p className="mt-6 text-center text-sm text-gray-400">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-brand-600 hover:text-brand-700">
+          <Link href="/login" className="font-medium text-primary hover:text-secondary transition-colors">
             Sign in
           </Link>
         </p>

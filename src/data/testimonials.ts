@@ -9,7 +9,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "SystomeX transformed our production line with a custom automation system. Their team's expertise in industrial robotics is unmatched. Delivery was on time and exceeded our expectations.",
     initials: "RS",
-    gradient: "from-primary to-secondary",
+    gradient: "from-secondary to-primary",
   },
   {
     id: "2",
@@ -39,6 +39,6 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "SystomeX helped me complete my final year robotics project with professional-grade components and mentorship. The project kit quality and documentation were excellent.",
     initials: "PD",
-    gradient: "from-primary to-accent",
+    gradient: "from-secondary via-accent to-primary",
   },
 ];

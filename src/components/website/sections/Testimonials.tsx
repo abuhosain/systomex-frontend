@@ -29,7 +29,7 @@ export default function Testimonials() {
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">
             <div className="relative p-8 md:p-12 rounded-3xl border border-white/10 bg-card/60 backdrop-blur-xl">
-              <Quote className="absolute top-6 left-6 w-10 h-10 text-primary/20" />
+              <Quote className="absolute top-6 left-6 w-10 h-10 text-secondary/20" />
 
               <AnimatePresence mode="wait">
                 <motion.div
@@ -80,7 +80,7 @@ export default function Testimonials() {
                       aria-label={`Go to testimonial ${i + 1}`}
                       className={`w-2 h-2 rounded-full transition-all ${
                         i === current
-                          ? "w-6 bg-gradient-to-r from-primary to-secondary"
+                          ? "w-6 bg-gradient-to-r from-secondary via-accent to-primary"
                           : "bg-white/20 hover:bg-white/40"
                       }`}
                     />

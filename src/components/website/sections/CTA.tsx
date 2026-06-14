@@ -15,7 +15,7 @@ export default function CTA() {
             className="relative rounded-3xl overflow-hidden"
           >
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary via-accent to-primary opacity-90" />
             <div className="absolute inset-0 bg-grid-pattern opacity-20" />
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

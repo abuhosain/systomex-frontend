@@ -36,8 +36,8 @@ export default function Projects() {
               className={cn(
                 "px-5 py-2 rounded-full text-sm font-medium transition-all duration-300",
                 activeCategory === cat
-                  ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/25"
-                  : "border border-white/10 text-gray-400 hover:border-primary/30 hover:text-white",
+                  ? "bg-gradient-to-r from-secondary via-accent to-primary text-white shadow-lg shadow-secondary/25"
+                  : "border border-white/10 text-gray-400 hover:border-secondary/30 hover:text-white",
               )}
             >
               {cat}

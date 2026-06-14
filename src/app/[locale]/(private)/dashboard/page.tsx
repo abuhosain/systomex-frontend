@@ -5,7 +5,7 @@ export default async function DashboardPage() {
   const user = await getUserFromCookie();
 
   return (
-    <div className="section-padding bg-gray-50 min-h-screen">
+    <div className="section-padding bg-dark min-h-screen">
       <div className="container">
 
         {/* Header */}
@@ -23,13 +23,13 @@ export default async function DashboardPage() {
           {STAT_CARDS.map((card) => (
             <div key={card.label} className="card p-6">
               <div className="flex items-center justify-between mb-3">
-                <p className="text-sm font-medium text-gray-500">{card.label}</p>
-                <div className="w-9 h-9 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600">
+                <p className="text-sm font-medium text-gray-400">{card.label}</p>
+                <div className="w-9 h-9 rounded-xl bg-secondary/10 flex items-center justify-center text-primary">
                   <card.icon className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-2xl font-bold text-gray-900">{card.value}</p>
-              <p className="text-xs text-gray-400 mt-1">{card.sub}</p>
+              <p className="text-2xl font-bold text-white">{card.value}</p>
+              <p className="text-xs text-gray-500 mt-1">{card.sub}</p>
             </div>
           ))}
         </div>
@@ -40,15 +40,15 @@ export default async function DashboardPage() {
           <dl className="space-y-3">
             <div className="flex gap-4">
               <dt className="w-24 text-sm text-gray-500 flex-shrink-0">Name</dt>
-              <dd className="text-sm font-medium text-gray-900">{user?.name ?? "—"}</dd>
+              <dd className="text-sm font-medium text-white">{user?.name ?? "—"}</dd>
             </div>
             <div className="flex gap-4">
               <dt className="w-24 text-sm text-gray-500 flex-shrink-0">Email</dt>
-              <dd className="text-sm font-medium text-gray-900">{user?.email ?? "—"}</dd>
+              <dd className="text-sm font-medium text-white">{user?.email ?? "—"}</dd>
             </div>
             <div className="flex gap-4">
               <dt className="w-24 text-sm text-gray-500 flex-shrink-0">Role</dt>
-              <dd className="text-sm font-medium text-gray-900 capitalize">{user?.role ?? "user"}</dd>
+              <dd className="text-sm font-medium text-white capitalize">{user?.role ?? "user"}</dd>
             </div>
           </dl>
         </div>

@@ -53,10 +53,10 @@ export default function LoginPage() {
 
   return (
     <div className="w-full max-w-md">
-      <div className="bg-white border border-gray-200 rounded-2xl px-8 py-10 shadow-sm">
+      <div className="card px-8 py-10">
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-gray-900">Sign in</h1>
-          <p className="mt-1 text-sm text-gray-500">Welcome back — enter your credentials</p>
+          <h1 className="text-2xl font-bold text-white">Sign in</h1>
+          <p className="mt-1 text-sm text-gray-400">Welcome back — enter your credentials</p>
         </div>
 
         <form onSubmit={handleSubmit} noValidate className="space-y-5">
@@ -85,7 +85,7 @@ export default function LoginPage() {
           />
 
           <div className="flex items-center justify-end">
-            <Link href="/forgot-password" className="text-xs text-brand-600 hover:text-brand-700">
+            <Link href="/forgot-password" className="text-xs text-primary hover:text-secondary transition-colors">
               Forgot password?
             </Link>
           </div>
@@ -95,9 +95,9 @@ export default function LoginPage() {
           </Button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-500">
+        <p className="mt-6 text-center text-sm text-gray-400">
           Don&apos;t have an account?{" "}
-          <Link href="/signup" className="font-medium text-brand-600 hover:text-brand-700">
+          <Link href="/signup" className="font-medium text-primary hover:text-secondary transition-colors">
             Create one
           </Link>
         </p>
